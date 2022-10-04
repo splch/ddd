@@ -499,9 +499,9 @@ INCBIN "res/crash_font.1bpp.pb8"
 
 .header
 	;   0123456789ABCDEFGHI  19 chars
-	db "GAME CRASH!! Please"
-	db "send a clear pic of"
-	db "this screen to devs"
+	db "GAME CRASH! Send an"
+	db "image of this data:"
+	db "spence at duck com "
 
 	assert @ - .header == HEADER_WIDTH * HEADER_HEIGHT
 
