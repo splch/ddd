@@ -2,22 +2,23 @@
 
 
 # Value that the ROM will be filled with
-PADVALUE := 0xFF
+PADVALUE := 0x00
 
 ## Header constants (passed to RGBFIX)
 
 # ROM version (typically starting at 0 and incremented for each published version)
-VERSION := 0
+VERSION := 0x00
 
 # 4-ASCII letter game ID
-GAMEID := BOIL
+# GAMEID := DDDN
 
 # Game title, up to 11 ASCII chars
-TITLE := BOILERPLATE
+TITLE := DDDUNGEON
 
 # New licensee, 2 ASCII chars
+# See https://gbdev.io/pandocs/The_Cartridge_Header.html#0144-0145--new-licensee-code or consult any copy of Pan Docs
 # Homebrew games FTW!
-LICENSEE := HB
+LICENSEE := 00
 # Old licensee, please set to 0x33 (required to get SGB compatibility)
 OLDLIC := 0x33
 
@@ -34,7 +35,7 @@ MBC := 0x00
 SRAMSIZE := 0x00
 
 # ROM name
-ROMNAME := boilerplate
+ROMNAME := dundundungeon
 ROMEXT  := gb
 
 
@@ -49,12 +50,12 @@ ASFLAGS += -h
 # ASFLAGS += -E
 
 # Game Boy Color compatible
-# FIXFLAGS += -c
+FIXFLAGS += -c
 # Game Boy Color required
 # FIXFLAGS += -C
 
 # Super Game Boy compatible
-# FIXFLAGS += -s
+FIXFLAGS += -s
 
 # Game Boy mode
 # LDFLAGS += -d
