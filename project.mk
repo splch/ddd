@@ -2,7 +2,7 @@
 
 
 # Value that the ROM will be filled with
-PADVALUE := 0x00
+PADVALUE := 0xFF
 
 ## Header constants (passed to RGBFIX)
 
