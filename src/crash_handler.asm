@@ -2,7 +2,7 @@
 INCLUDE "defines.asm"
 
 	newcharmap crash_handler
-CHARS equs "0123456789ABCDEF-GHIJKLMNOPQR:SUVWXYZabcdefghijklmnopqrTstuvwxyz! "
+CHARS equs "0123456789ABCDEF-GHIJKLMNOPQR:SUVWXYZabcdefghijklmnopqrTstuvwxyz. "
 CHAR = 0
 REPT STRLEN("{CHARS}")
 	charmap STRSUB("{CHARS}", CHAR + 1, 1), CHAR
@@ -499,9 +499,9 @@ INCBIN "res/crash_font.1bpp.pb8"
 
 .header
 	;   0123456789ABCDEFGHI  19 chars
-	db "GAME CRASH! Send an"
-	db "image of this data:"
-	db "spence at duck com "
+	db "GAME CRASH - Please"
+	db "email this data to:"
+	db "spence at duck.com."
 
 	assert @ - .header == HEADER_WIDTH * HEADER_HEIGHT
 

@@ -4,7 +4,7 @@ The crash handler
 When gb-starter-kit is built and run, after the hardware setup in `header.asm` finishes, it jumps to the main routine `Intro` in `intro.asm`.
 A newly created project shows a crash dump displaying the following:
 
-* "GAME CRASH!!" message explaining to the tester what just happened
+* "GAME CRASH" message explaining to the tester what just happened
 * "Model", the value of `hConsoleType` set in `header.asm` to the initial value of `A` minus $11.  This is `00` for Game Boy Color or either `F0` or `EE` for monochrome.
 * Values of processor register pairs `AF`, `BC`, `DE`, `HL`, and `SP`
 * Two views of 24 bytes of memory, initially centered around `HL` and `SP`.
